@@ -1,5 +1,5 @@
 # Space_Issues
-Un videojuego de naves que destruyen asteroides hecho en Godot
+Un videojuego de naves hecho en Godot
 
 ***
 Meteoritos es un juego del tipo shmup 2D para PC donde debemos controlar
