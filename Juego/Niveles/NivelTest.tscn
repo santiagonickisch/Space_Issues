@@ -10,10 +10,5 @@ position = Vector2( 232, 258 )
 mode = 1
 mass = 50.0
 physics_material_override = ExtResource( 2 )
-gravity_scale = 0.4
-
-[node name="Player2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 239, 141 )
-mass = 15.0
-physics_material_override = ExtResource( 2 )
-gravity_scale = 1.2
+gravity_scale = 0.0
+can_sleep = false
