@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/disparo_laser2_sfx.ogg-805d5ef0fe95096dbd8a850862e25c2a.oggstr"
+
+[deps]
+
+source_file="res://Juego/SFX/disparo_laser2_sfx.ogg"
+dest_files=[ "res://.import/disparo_laser2_sfx.ogg-805d5ef0fe95096dbd8a850862e25c2a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

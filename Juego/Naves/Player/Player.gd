@@ -12,17 +12,21 @@ var dir_rotacion:int = 0
 
 ## Atributos Onready
 onready var canion:Canion = $Canion
+onready var laser:RayoLaser = $LaserBeam2D
 
 ## Metodos
-# warning-ignore:unused_argument
+func _unhandled_input(event: InputEvent) -> void:
+	#Disparo Rayo
+	if event.is_action_pressed("disparo_secundario"):
+		laser.set_is_casting(true)
+	
+	if event.is_action_released("disparo_secundario"):
+		laser.set_is_casting(false)
+
 func _integrate_forces(state: Physics2DDirectBodyState) -> void:
-	# Los print son solo para entender mejor que esta pasando. BORRAR
-	print(rad2deg(rotation))
-	print(empuje.rotated(rotation))
 	apply_central_impulse(empuje.rotated(rotation))
 	apply_torque_impulse(dir_rotacion * potencia_rotacion)
 
-# warning-ignore:unused_argument
 func _process(delta: float) -> void:
 	player_input()
 
