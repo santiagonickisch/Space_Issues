@@ -1,14 +1,12 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Juego/Naves/Player/Player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Juego/Naves/Player/material_fisico.tres" type="PhysicsMaterial" id=2]
+[ext_resource path="res://Juego/Niveles/Nivel.gd" type="Script" id=2]
 
-[node name="NivelTest" type="Node2D"]
+[node name="Nivel" type="Node2D"]
+script = ExtResource( 2 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 232, 258 )
-mode = 1
-mass = 50.0
-physics_material_override = ExtResource( 2 )
-gravity_scale = 0.0
-can_sleep = false
+
+[editable path="Player"]
+[editable path="Player/Canion"]

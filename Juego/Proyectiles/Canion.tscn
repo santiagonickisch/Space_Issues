@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Juego/Proyectiles/Canion.gd" type="Script" id=1]
+[ext_resource path="res://Juego/Proyectiles/Proyectiles.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TemporalAssets/spaceshooter/Bonus/sfx_laser2.ogg" type="AudioStream" id=3]
+
+[node name="Canion" type="Node2D"]
+script = ExtResource( 1 )
+proyectil = ExtResource( 2 )
+cadencia_disparo = 0.2
+velocidad_proyectil = 2000
+
+[node name="punto_izquierdo" type="Position2D" parent="."]
+
+[node name="punto_derecho" type="Position2D" parent="."]
+
+[node name="disparoSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+bus = "SFX"
+
+[node name="timer_enfriamiento" type="Timer" parent="."]
+
+[connection signal="timeout" from="timer_enfriamiento" to="." method="_on_timer_enfriamiento_timeout"]
