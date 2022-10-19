@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Impactos.ogg-6365610723820926a6340e6cad96daca.oggstr"
+
+[deps]
+
+source_file="res://Juego/SFX/Impactos.ogg"
+dest_files=[ "res://.import/Impactos.ogg-6365610723820926a6340e6cad96daca.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -10,7 +10,8 @@ enum ESTADO {SPAWN, VIVO, INVENCIBLE, MUERTO}
 export var potencia_motor:int = 20
 export var potencia_rotacion:int = 280
 export var estela_maxima:int = 150
-
+export var hitpoints:float = 15.0
+ 
 ## Atributos
 var empuje:Vector2 = Vector2.ZERO
 var dir_rotacion:int = 0
@@ -22,7 +23,7 @@ onready var laser:RayoLaser = $LaserBeam2D
 onready var motor_sfx:Motor = $MotorSFX
 onready var estela:Estela = $EstelaPuntoInicio/Trail2D
 onready var colisionador:CollisionShape2D = $CollisionShape2D
-
+onready var impacto_sfx:AudioStreamPlayer = $ImpactoSFX
 
 
 ## Metodos
@@ -65,6 +66,12 @@ func _integrate_forces(state: Physics2DDirectBodyState) -> void:
 func _process(delta: float) -> void:
 	player_input()
 
+func recibir_danio(danio: float) -> void:
+	hitpoints -= danio
+	if hitpoints <= 0.0:
+		queue_free()
+	
+	impacto_sfx.play()
 
 ## Metodos Custom
 func controlador_estados(nuevo_estado: int) -> void:
