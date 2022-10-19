@@ -1,13 +1,16 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Juego/Naves/Player/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Juego/Niveles/Nivel.gd" type="Script" id=2]
 [ext_resource path="res://Juego/SFX/disparo_laser_sfx.ogg" type="AudioStream" id=3]
 [ext_resource path="res://default_env.tres" type="Environment" id=4]
 [ext_resource path="res://Juego/Proyectiles/ProyectilPlayer.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Juego/Explosiones/Explosion.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Juego/Enemigos/EnemigoDummy.tscn" type="PackedScene" id=7]
 
 [node name="Nivel" type="Node2D"]
 script = ExtResource( 2 )
+explosion = ExtResource( 6 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 z_index = 50
@@ -22,6 +25,8 @@ stream = ExtResource( 3 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 4 )
+
+[node name="EnemigoDummy" parent="." instance=ExtResource( 7 )]
 
 [editable path="Player"]
 [editable path="Player/Canion"]
