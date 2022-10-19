@@ -3,7 +3,7 @@ class_name Escudo
 extends Area2D
 
 ## Variables export
-export var energia:float = 8.0
+export var energia:float = 10.0
 export var radio_desgaste:float = -1.6
 
 ## Variables
@@ -51,4 +51,4 @@ func _on_AnimationPlayer_animation_finished(anim_name: String) -> void:
 
 
 func _on_body_entered(body: Node) -> void:
-	pass # Replace with function body.
+	body.queue_free()
