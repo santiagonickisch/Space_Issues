@@ -23,10 +23,16 @@ proyectil = ExtResource( 5 )
 [node name="disparoSFX" parent="Player/Canion" index="2"]
 stream = ExtResource( 3 )
 
+[node name="LaserBeam2D" parent="Player" index="3"]
+collision_mask = 6
+collide_with_areas = true
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource( 4 )
 
 [node name="EnemigoDummy" parent="." instance=ExtResource( 7 )]
+position = Vector2( 188, 589 )
 
 [editable path="Player"]
 [editable path="Player/Canion"]
+[editable path="Player/Escudo"]
