@@ -12,5 +12,6 @@ func recibir_danio(danio: float) -> void:
 	if hitpoints <= 0.0:
 		queue_free()
 
+# warning-ignore:unused_argument
 func _process(delta: float) -> void:
 	$Canion.set_esta_disparando(true)

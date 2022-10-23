@@ -74,7 +74,7 @@ func _process(delta: float) -> void:
 func recibir_danio(danio: float) -> void:
 	hitpoints -= danio
 	if hitpoints <= 0.0:
-		queue_free()
+		destruir()
 	
 	impacto_sfx.play()
 
